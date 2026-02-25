@@ -148,9 +148,9 @@ export function ContextTab() {
             </div>
           </div>
           <div className="mt-4 p-4 bg-gradient-to-r from-green-100 to-emerald-100 rounded-lg border border-green-300">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
               <span className="font-semibold">Economia neste exemplo:</span>
-              <Badge className="bg-green-600 text-white text-lg px-4 py-1">
+              <Badge className="bg-green-600 text-white text-lg px-4 py-1 self-start sm:self-auto">
                 93.75% (~16x mais barato)
               </Badge>
             </div>
