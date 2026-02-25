@@ -8,6 +8,7 @@ import { StructureTab } from "./components/StructureTab";
 import { AdvancedTab } from "./components/tabs/AdvancedTab";
 import { AgentsPage } from "./pages/AgentsPage";
 import { SkillsPage } from "./pages/SkillsPage";
+import { RAGPage } from "./pages/RAGPage";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
             <Route path="/structure" element={<StructureTab />} />
             <Route path="/agents" element={<AgentsPage />} />
             <Route path="/skills" element={<SkillsPage />} />
+            <Route path="/rag" element={<RAGPage />} />
             <Route path="/advanced" element={<AdvancedTab />} />
           </Routes>
           <Footer />

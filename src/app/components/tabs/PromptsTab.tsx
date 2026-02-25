@@ -1,6 +1,7 @@
 import { CheckCircle2, XCircle } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Separator } from "../ui/separator";
+import { PromptTechniquesSection } from "../prompts/PromptTechniquesSection";
 
 interface PromptExampleProps {
   good: boolean;
@@ -34,6 +35,7 @@ function PromptExample({ good, title, prompt, explanation }: PromptExampleProps)
 export function PromptsTab() {
   return (
     <div className="space-y-4">
+      <PromptTechniquesSection />
       <Card>
         <CardHeader>
           <CardTitle>✅ Bons Exemplos de Prompts</CardTitle>

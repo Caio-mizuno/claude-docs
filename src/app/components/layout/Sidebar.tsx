@@ -8,6 +8,7 @@ import {
   Bot,
   Wrench,
   Rocket,
+  Database,
 } from "lucide-react";
 
 const navItems = [
@@ -17,6 +18,7 @@ const navItems = [
   { to: "/structure", label: "Estrutura", icon: FolderOpen },
   { to: "/agents", label: "Agentes", icon: Bot },
   { to: "/skills", label: "Skills", icon: Wrench },
+  { to: "/rag", label: "RAG", icon: Database },
   { to: "/advanced", label: "Avançado", icon: Rocket },
 ];
 
