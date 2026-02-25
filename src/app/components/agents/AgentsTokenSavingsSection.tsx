@@ -15,9 +15,9 @@ function SavingsRow({ task, withoutTokens, withTokens }: SavingsRowProps) {
 
   return (
     <div className="space-y-1.5">
-      <div className="flex items-center justify-between text-sm">
-        <span className="text-slate-700 font-medium">{task}</span>
-        <Badge className="bg-green-600 text-white text-xs">-{saving}%</Badge>
+      <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
+        <span className="text-slate-700 font-medium min-w-0">{task}</span>
+        <Badge className="bg-green-600 text-white text-xs flex-shrink-0">-{saving}%</Badge>
       </div>
       <div className="relative h-6 bg-red-100 rounded-full overflow-hidden border border-red-200">
         <div
@@ -120,7 +120,7 @@ export function AgentsTokenSavingsSection() {
             <SavingsRow task="Revisar acessibilidade" withoutTokens={280} withTokens={40} />
           </div>
           <div className="mt-4 p-3 bg-green-50 rounded-lg border border-green-200">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="text-sm font-semibold text-green-900">Economia média</span>
               <Badge className="bg-green-600 text-white text-base px-3">~85% de tokens</Badge>
             </div>

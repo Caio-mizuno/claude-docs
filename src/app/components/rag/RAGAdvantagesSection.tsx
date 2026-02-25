@@ -16,9 +16,9 @@ function SavingsRow({ label, withoutTokens, withTokens, color }: SavingsRowProps
 
   return (
     <div className="space-y-1.5">
-      <div className="flex items-center justify-between text-sm">
-        <span className="text-slate-700 font-medium">{label}</span>
-        <Badge className={`${color} text-white text-xs`}>-{saving}%</Badge>
+      <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
+        <span className="text-slate-700 font-medium min-w-0">{label}</span>
+        <Badge className={`${color} text-white text-xs flex-shrink-0`}>-{saving}%</Badge>
       </div>
       <div className="relative h-6 bg-red-100 rounded-full overflow-hidden border border-red-200">
         <div
@@ -132,7 +132,7 @@ export function RAGAdvantagesSection() {
             <SavingsRow label="Debug com histórico do módulo" withoutTokens={2800} withTokens={200} color="bg-teal-600" />
           </div>
           <div className="mt-4 p-3 bg-teal-50 rounded-lg border border-teal-200">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="text-sm font-semibold text-teal-900">Economia média com RAG</span>
               <Badge className="bg-teal-600 text-white text-base px-3">~94% de tokens</Badge>
             </div>

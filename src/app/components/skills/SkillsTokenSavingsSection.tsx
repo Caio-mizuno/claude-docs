@@ -15,9 +15,9 @@ function SavingsRow({ task, withoutTokens, withTokens }: SavingsRowProps) {
 
   return (
     <div className="space-y-1.5">
-      <div className="flex items-center justify-between text-sm">
-        <span className="text-slate-700 font-medium">{task}</span>
-        <Badge className="bg-orange-500 text-white text-xs">-{saving}%</Badge>
+      <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
+        <span className="text-slate-700 font-medium min-w-0">{task}</span>
+        <Badge className="bg-orange-500 text-white text-xs flex-shrink-0">-{saving}%</Badge>
       </div>
       <div className="relative h-6 bg-red-100 rounded-full overflow-hidden border border-red-200">
         <div
@@ -120,7 +120,7 @@ export function SkillsTokenSavingsSection() {
             <SavingsRow task="Criar nova página com rota" withoutTokens={550} withTokens={12} />
           </div>
           <div className="mt-4 p-3 bg-orange-50 rounded-lg border border-orange-200">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="text-sm font-semibold text-orange-900">Economia média com skills</span>
               <Badge className="bg-orange-600 text-white text-base px-3">~97% de tokens</Badge>
             </div>

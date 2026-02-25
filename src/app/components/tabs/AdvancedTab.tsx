@@ -23,7 +23,7 @@ function AdvancedTechnique({ title, description, steps, benefit }: AdvancedTechn
           </div>
         ))}
       </div>
-      <Badge className="bg-purple-600 text-white">{benefit}</Badge>
+      <Badge className="bg-purple-600 text-white whitespace-normal">{benefit}</Badge>
     </div>
   );
 }

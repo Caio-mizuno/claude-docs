@@ -14,7 +14,7 @@ interface ComparisonProps {
 function PromptComparison({ title, withoutLines, withPrompt, saving, steps }: ComparisonProps) {
   return (
     <div className="rounded-lg border border-slate-200 overflow-hidden">
-      <div className="px-4 py-2 bg-slate-100 border-b border-slate-200 flex items-center justify-between">
+      <div className="px-4 py-2 bg-slate-100 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2">
         <span className="text-sm font-semibold text-slate-700">{title}</span>
         <Badge variant="outline" className="text-xs">{steps} passos automatizados</Badge>
       </div>

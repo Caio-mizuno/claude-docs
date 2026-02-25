@@ -178,9 +178,9 @@ export function AgentsExamplesSection() {
             />
           </div>
           <div className="mt-4 p-3 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg border border-purple-200">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="text-sm font-semibold text-slate-700">Feature completa de checkout</span>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 <Badge className="bg-purple-600 text-white">4 prompts</Badge>
                 <Badge className="bg-green-600 text-white">~30 palavras no total</Badge>
               </div>

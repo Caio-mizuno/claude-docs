@@ -15,7 +15,7 @@ interface UseCaseProps {
 function UseCase({ emoji, title, scenario, prompt, result, saving }: UseCaseProps) {
   return (
     <div className="rounded-lg border border-slate-200 overflow-hidden">
-      <div className="px-4 py-3 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+      <div className="px-4 py-3 bg-slate-50 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <span className="text-lg">{emoji}</span>
           <h4 className="font-semibold text-sm text-slate-800">{title}</h4>

@@ -19,7 +19,7 @@ function ContextStrategy({ number, title, description, impact }: ContextStrategy
       <div className="flex-1">
         <h4 className="font-semibold mb-1">{title}</h4>
         <p className="text-sm text-slate-600 mb-2">{description}</p>
-        <Badge className="bg-blue-600 text-white text-xs">{impact}</Badge>
+        <Badge className="bg-blue-600 text-white text-xs whitespace-normal">{impact}</Badge>
       </div>
     </div>
   );
