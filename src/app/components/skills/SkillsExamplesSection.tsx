@@ -74,7 +74,7 @@ export function SkillsExamplesSection() {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <BookOpen className="w-6 h-6 text-orange-600" />
+          <BookOpen className="w-6 h-6 text-yellow-600" />
           Exemplos Práticos de Uso
         </CardTitle>
         <CardDescription>
@@ -147,7 +147,7 @@ export function SkillsExamplesSection() {
           <div className="space-y-3">
             <ReuseExample
               skill="@skill/create-component.md"
-              color="bg-orange-50 border-orange-200 text-orange-800"
+              color="bg-yellow-50 border-yellow-200 text-yellow-800"
               invocations={[
                 "Use @skill/create-component.md para Button",
                 "Use @skill/create-component.md para Modal",
@@ -165,8 +165,8 @@ export function SkillsExamplesSection() {
               ]}
             />
           </div>
-          <div className="mt-3 p-3 bg-orange-50 border border-orange-200 rounded-lg">
-            <p className="text-xs text-orange-800">
+          <div className="mt-3 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+            <p className="text-xs text-yellow-800">
               <strong>Defina uma vez, use para sempre.</strong> Cada invocação produz o mesmo padrão de qualidade sem nenhum esforço extra.
             </p>
           </div>
@@ -186,7 +186,7 @@ export function SkillsExamplesSection() {
                 combo: "@agents/ui-agent.md + @skill/create-component.md",
                 prompt: "@agents/ui-agent.md use @skill/create-component.md para Avatar",
                 result: "Componente criado com expertise de UI + todos os passos da skill cumpridos",
-                color: "bg-pink-50 border-pink-200",
+                color: "bg-purple-50 border-purple-200",
               },
               {
                 combo: "@agents/backend-agent.md + @skill/add-api-endpoint.md",

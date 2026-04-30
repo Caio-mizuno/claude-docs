@@ -43,7 +43,7 @@ function CodeBlock({ children }: { children: React.ReactNode }) {
 export function AgentsTutorialSection() {
   return (
     <Card className="border-2 border-blue-300">
-      <CardHeader className="bg-gradient-to-r from-blue-50 to-cyan-50">
+      <CardHeader className="bg-gradient-to-r from-blue-50 to-blue-100">
         <CardTitle className="flex items-center gap-2">
           <Terminal className="w-6 h-6 text-blue-600" />
           Tutorial: Criando um Agente no Claude Code

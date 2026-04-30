@@ -20,7 +20,7 @@ function UseCase({ emoji, title, scenario, prompt, result, saving }: UseCaseProp
           <span className="text-lg">{emoji}</span>
           <h4 className="font-semibold text-sm text-slate-800">{title}</h4>
         </div>
-        <Badge className="bg-teal-600 text-white text-xs">{saving}</Badge>
+        <Badge className="bg-green-600 text-white text-xs">{saving}</Badge>
       </div>
       <div className="p-4 space-y-3">
         <div>
@@ -32,7 +32,7 @@ function UseCase({ emoji, title, scenario, prompt, result, saving }: UseCaseProp
           <code className="block text-xs font-mono bg-slate-900 text-green-400 p-2 rounded">{prompt}</code>
         </div>
         <div className="flex items-start gap-2">
-          <ArrowRight className="w-3.5 h-3.5 text-teal-600 mt-0.5 flex-shrink-0" />
+          <ArrowRight className="w-3.5 h-3.5 text-green-600 mt-0.5 flex-shrink-0" />
           <p className="text-xs text-slate-600">{result}</p>
         </div>
       </div>
@@ -85,7 +85,7 @@ export function RAGExamplesSection() {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Layers className="w-6 h-6 text-teal-600" />
+          <Layers className="w-6 h-6 text-green-600" />
           Exemplos Práticos de Uso
         </CardTitle>
         <CardDescription>
@@ -185,7 +185,7 @@ export function RAGExamplesSection() {
             {[
               {
                 step: "1",
-                color: "bg-teal-600",
+                color: "bg-green-600",
                 prompt: '"Busque no codebase como fazemos validação de formulários atualmente"',
                 note: "RAG recupera os trechos relevantes → Claude entende o padrão existente",
               },
@@ -197,7 +197,7 @@ export function RAGExamplesSection() {
               },
               {
                 step: "3",
-                color: "bg-orange-500",
+                color: "bg-yellow-500",
                 prompt: "Use @skill/create-component.md para FormField com validação",
                 note: "Skill executa o procedimento completo — componente, tipos, testes, exports",
               },
@@ -215,7 +215,7 @@ export function RAGExamplesSection() {
               </div>
             ))}
           </div>
-          <div className="mt-3 p-3 bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg border border-teal-200">
+          <div className="mt-3 p-3 bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg border border-green-200">
             <p className="text-xs text-slate-700 text-center">
               <strong>Resultado:</strong> componente criado consistentemente com o padrão do projeto, aproveitando código existente, com testes — tudo com 3 prompts curtos.
             </p>

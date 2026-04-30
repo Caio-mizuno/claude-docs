@@ -39,7 +39,7 @@ export function PluginsTab() {
         <AccordionItem value="rtk" className="border rounded-lg px-4 bg-white">
           <AccordionTrigger className="hover:no-underline py-4">
             <div className="flex items-center gap-3 text-left">
-              <Zap className="w-5 h-5 text-orange-600 flex-shrink-0" />
+              <Zap className="w-5 h-5 text-yellow-600 flex-shrink-0" />
               <div className="flex-1">
                 <div className="font-semibold text-slate-900">RTK — Rust Token Killer</div>
                 <div className="text-sm text-slate-600 mt-0.5">
@@ -417,7 +417,7 @@ export function PluginsTab() {
         <AccordionItem value="coderabbit" className="border rounded-lg px-4 bg-white">
           <AccordionTrigger className="hover:no-underline py-4">
             <div className="flex items-center gap-3 text-left">
-              <Rabbit className="w-5 h-5 text-indigo-600 flex-shrink-0" />
+              <Rabbit className="w-5 h-5 text-purple-600 flex-shrink-0" />
               <div className="flex-1">
                 <div className="font-semibold text-slate-900">CodeRabbit</div>
                 <div className="text-sm text-slate-600 mt-0.5">
@@ -533,7 +533,7 @@ export function PluginsTab() {
         <AccordionItem value="claude-mem" className="border rounded-lg px-4 bg-white">
           <AccordionTrigger className="hover:no-underline py-4">
             <div className="flex items-center gap-3 text-left">
-              <Brain className="w-5 h-5 text-teal-600 flex-shrink-0" />
+              <Brain className="w-5 h-5 text-green-600 flex-shrink-0" />
               <div className="flex-1">
                 <div className="font-semibold text-slate-900">Claude-Mem</div>
                 <div className="text-sm text-slate-600 mt-0.5">
@@ -618,7 +618,7 @@ export function PluginsTab() {
         <AccordionItem value="claude-hud" className="border rounded-lg px-4 bg-white">
           <AccordionTrigger className="hover:no-underline py-4">
             <div className="flex items-center gap-3 text-left">
-              <Gauge className="w-5 h-5 text-cyan-600 flex-shrink-0" />
+              <Gauge className="w-5 h-5 text-blue-600 flex-shrink-0" />
               <div className="flex-1">
                 <div className="font-semibold text-slate-900">Claude HUD</div>
                 <div className="text-sm text-slate-600 mt-0.5">
@@ -704,7 +704,7 @@ export function PluginsTab() {
         <AccordionItem value="superpowers" className="border rounded-lg px-4 bg-white">
           <AccordionTrigger className="hover:no-underline py-4">
             <div className="flex items-center gap-3 text-left">
-              <Layers className="w-5 h-5 text-violet-600 flex-shrink-0" />
+              <Layers className="w-5 h-5 text-purple-600 flex-shrink-0" />
               <div className="flex-1">
                 <div className="font-semibold text-slate-900">Superpowers Framework</div>
                 <div className="text-sm text-slate-600 mt-0.5">
@@ -931,7 +931,7 @@ export function PluginsTab() {
         <AccordionItem value="frontend-design" className="border rounded-lg px-4 bg-white">
           <AccordionTrigger className="hover:no-underline py-4">
             <div className="flex items-center gap-3 text-left">
-              <Palette className="w-5 h-5 text-pink-600 flex-shrink-0" />
+              <Palette className="w-5 h-5 text-purple-600 flex-shrink-0" />
               <div className="flex-1">
                 <div className="font-semibold text-slate-900">Frontend Design</div>
                 <div className="text-sm text-slate-600 mt-0.5">
@@ -989,7 +989,7 @@ export function PluginsTab() {
         <AccordionItem value="firecrawl" className="border rounded-lg px-4 bg-white">
           <AccordionTrigger className="hover:no-underline py-4">
             <div className="flex items-center gap-3 text-left">
-              <Download className="w-5 h-5 text-orange-500 flex-shrink-0" />
+              <Download className="w-5 h-5 text-yellow-500 flex-shrink-0" />
               <div className="flex-1">
                 <div className="font-semibold text-slate-900">Firecrawl</div>
                 <div className="text-sm text-slate-600 mt-0.5">

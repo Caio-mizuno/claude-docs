@@ -30,7 +30,7 @@ export function HowItWorksSection() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="bg-orange-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-sm font-bold">3</div>
+              <div className="bg-yellow-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-sm font-bold">3</div>
               <div>
                 <p className="font-semibold text-sm">Invoca uma skill</p>
                 <p className="text-xs text-slate-600">"Use @skill/create-component.md para ProductCard"</p>

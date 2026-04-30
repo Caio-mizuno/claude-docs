@@ -7,7 +7,7 @@ import { StepByStep } from "./shared";
 export function CreateAgentSection() {
   return (
     <Card className="border-2 border-blue-300">
-      <CardHeader className="bg-gradient-to-r from-blue-50 to-cyan-50">
+      <CardHeader className="bg-gradient-to-r from-blue-50 to-blue-100">
         <CardTitle className="flex items-center gap-2">
           <Pencil className="w-6 h-6 text-blue-600" />
           Como Criar um Agent (Passo a Passo)

@@ -32,10 +32,10 @@ function FlowStep({
 
 export function RAGOverviewSection() {
   return (
-    <Card className="border-2 border-teal-300">
-      <CardHeader className="bg-gradient-to-r from-teal-50 to-cyan-50">
+    <Card className="border-2 border-green-300">
+      <CardHeader className="bg-gradient-to-r from-green-50 to-green-100">
         <CardTitle className="flex items-center gap-2">
-          <Database className="w-6 h-6 text-teal-600" />
+          <Database className="w-6 h-6 text-green-600" />
           O que é RAG no Claude Code?
         </CardTitle>
         <CardDescription>
@@ -44,15 +44,15 @@ export function RAGOverviewSection() {
       </CardHeader>
       <CardContent className="pt-6 space-y-6">
 
-        <div className="p-4 bg-teal-50 border border-teal-200 rounded-lg">
+        <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
           <p className="text-sm text-slate-700">
             <strong>RAG (Retrieval-Augmented Generation)</strong> é uma técnica que permite ao Claude Code
             buscar e recuperar apenas os trechos <em>mais relevantes</em> de uma base de conhecimento
             antes de gerar uma resposta — em vez de carregar arquivos inteiros como contexto.
           </p>
           <div className="flex flex-wrap gap-2 mt-3">
-            <Badge className="bg-teal-600 text-white">Codebase inteiro indexado</Badge>
-            <Badge className="bg-cyan-600 text-white">Apenas trechos relevantes enviados</Badge>
+            <Badge className="bg-green-600 text-white">Codebase inteiro indexado</Badge>
+            <Badge className="bg-blue-600 text-white">Apenas trechos relevantes enviados</Badge>
             <Badge className="bg-green-600 text-white">Tokens drasticamente reduzidos</Badge>
           </div>
         </div>
@@ -76,13 +76,13 @@ export function RAGOverviewSection() {
               icon={Database}
               label="Busca vetorial"
               description="Acha trechos similares"
-              color="bg-teal-600"
+              color="bg-green-600"
             />
             <FlowStep
               icon={FileSearch}
               label="Top K chunks"
               description="Apenas o relevante"
-              color="bg-orange-500"
+              color="bg-yellow-500"
             />
             <FlowStep
               icon={MessageSquare}
@@ -146,7 +146,7 @@ export function RAGOverviewSection() {
                 name: "Filesystem MCP",
                 type: "Nativo",
                 description: "Servidor MCP oficial. Busca em arquivos locais sem indexação vetorial.",
-                color: "bg-teal-50 border-teal-200 text-teal-800",
+                color: "bg-green-50 border-green-200 text-green-800",
               },
             ].map(({ name, type, description, color }) => (
               <div key={name} className={`p-3 rounded-lg border ${color}`}>

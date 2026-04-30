@@ -16,14 +16,14 @@ function SetupStep({ number, icon: Icon, title, description, children, last }: S
   return (
     <div className="flex gap-4">
       <div className="flex flex-col items-center">
-        <div className="w-9 h-9 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
+        <div className="w-9 h-9 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
           {number}
         </div>
-        {!last && <div className="w-px flex-1 bg-teal-200 mt-2" />}
+        {!last && <div className="w-px flex-1 bg-green-200 mt-2" />}
       </div>
       <div className="pb-6 flex-1">
         <div className="flex items-center gap-2 mb-1">
-          <Icon className="w-4 h-4 text-teal-600" />
+          <Icon className="w-4 h-4 text-green-600" />
           <h3 className="font-semibold text-slate-900">{title}</h3>
         </div>
         <p className="text-sm text-slate-500 mb-3">{description}</p>
@@ -43,10 +43,10 @@ function CodeBlock({ children }: { children: React.ReactNode }) {
 
 export function RAGSetupSection() {
   return (
-    <Card className="border-2 border-teal-300">
-      <CardHeader className="bg-gradient-to-r from-teal-50 to-cyan-50">
+    <Card className="border-2 border-green-300">
+      <CardHeader className="bg-gradient-to-r from-green-50 to-green-100">
         <CardTitle className="flex items-center gap-2">
-          <Settings className="w-6 h-6 text-teal-600" />
+          <Settings className="w-6 h-6 text-green-600" />
           Como Configurar RAG no Claude Code
         </CardTitle>
         <CardDescription>
@@ -116,9 +116,9 @@ export function RAGSetupSection() {
               <div className="text-green-400">{"  }"}</div>
               <div className="text-green-400">{"}"}</div>
             </CodeBlock>
-            <div className="mt-3 p-3 bg-teal-50 border border-teal-200 rounded-lg">
-              <p className="text-xs text-teal-800">
-                <strong>Dica:</strong> Você pode adicionar múltiplos diretórios ao array <code className="bg-teal-100 px-1 rounded font-mono">args</code>.
+            <div className="mt-3 p-3 bg-green-50 border border-green-200 rounded-lg">
+              <p className="text-xs text-green-800">
+                <strong>Dica:</strong> Você pode adicionar múltiplos diretórios ao array <code className="bg-green-100 px-1 rounded font-mono">args</code>.
                 O Claude Code vai conseguir buscar em todos eles simultaneamente.
               </p>
             </div>
@@ -170,7 +170,7 @@ export function RAGSetupSection() {
                 O Claude Code agora consegue buscar no seu codebase e documentação em vez de depender de arquivos abertos manualmente.
               </p>
               <div className="flex flex-wrap gap-2">
-                <Badge className="bg-teal-600 text-white">Busca automática</Badge>
+                <Badge className="bg-green-600 text-white">Busca automática</Badge>
                 <Badge className="bg-green-600 text-white">Contexto sob demanda</Badge>
                 <Badge className="bg-blue-600 text-white">Tokens otimizados</Badge>
               </div>

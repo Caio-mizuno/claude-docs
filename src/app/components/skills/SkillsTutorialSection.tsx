@@ -16,14 +16,14 @@ function TutorialStep({ number, icon: Icon, title, description, children, last }
   return (
     <div className="flex gap-4">
       <div className="flex flex-col items-center">
-        <div className="w-9 h-9 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
+        <div className="w-9 h-9 rounded-full bg-yellow-500 text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
           {number}
         </div>
-        {!last && <div className="w-px flex-1 bg-orange-200 mt-2" />}
+        {!last && <div className="w-px flex-1 bg-yellow-200 mt-2" />}
       </div>
       <div className="pb-6 flex-1">
         <div className="flex items-center gap-2 mb-1">
-          <Icon className="w-4 h-4 text-orange-600" />
+          <Icon className="w-4 h-4 text-yellow-600" />
           <h3 className="font-semibold text-slate-900">{title}</h3>
         </div>
         <p className="text-sm text-slate-500 mb-3">{description}</p>
@@ -43,10 +43,10 @@ function CodeBlock({ children }: { children: React.ReactNode }) {
 
 export function SkillsTutorialSection() {
   return (
-    <Card className="border-2 border-orange-300">
+    <Card className="border-2 border-yellow-300">
       <CardHeader className="bg-gradient-to-r from-orange-50 to-amber-50">
         <CardTitle className="flex items-center gap-2">
-          <Terminal className="w-6 h-6 text-orange-600" />
+          <Terminal className="w-6 h-6 text-yellow-600" />
           Tutorial: Criando uma Skill no Claude Code
         </CardTitle>
         <CardDescription>
@@ -54,14 +54,14 @@ export function SkillsTutorialSection() {
         </CardDescription>
       </CardHeader>
       <CardContent className="pt-6">
-        <div className="mb-6 p-4 bg-orange-50 border border-orange-200 rounded-lg">
+        <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
           <p className="text-sm text-slate-700">
-            Skills são arquivos <code className="bg-orange-100 px-1 rounded text-orange-800 font-mono">.md</code> que
+            Skills são arquivos <code className="bg-yellow-100 px-1 rounded text-yellow-800 font-mono">.md</code> que
             descrevem um <strong>procedimento passo a passo</strong> para uma tarefa recorrente. Ao invocar{" "}
-            <code className="bg-orange-100 px-1 rounded text-orange-800 font-mono">@skill/nome.md</code>,
+            <code className="bg-yellow-100 px-1 rounded text-yellow-800 font-mono">@skill/nome.md</code>,
             o Claude executa todos os passos automaticamente — sem você precisar listá-los de novo.
           </p>
-          <div className="mt-3 p-3 bg-white rounded border border-orange-200">
+          <div className="mt-3 p-3 bg-white rounded border border-yellow-200">
             <div className="flex items-start gap-3">
               <div className="text-center flex-1">
                 <p className="text-xs text-slate-500 mb-1">Agente define</p>
@@ -70,7 +70,7 @@ export function SkillsTutorialSection() {
               <div className="text-slate-400 self-center">vs</div>
               <div className="text-center flex-1">
                 <p className="text-xs text-slate-500 mb-1">Skill define</p>
-                <p className="font-semibold text-orange-700 text-sm">o que Claude faz</p>
+                <p className="font-semibold text-yellow-700 text-sm">o que Claude faz</p>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ export function SkillsTutorialSection() {
               ].map((task) => (
                 <div
                   key={task}
-                  className="bg-orange-50 border border-orange-200 rounded px-2 py-1.5 text-xs text-orange-800 font-medium text-center"
+                  className="bg-yellow-50 border border-yellow-200 rounded px-2 py-1.5 text-xs text-yellow-800 font-medium text-center"
                 >
                   {task}
                 </div>
@@ -209,7 +209,7 @@ export function SkillsTutorialSection() {
                 O Claude vai executar todos os passos do procedimento automaticamente, validando cada etapa pelo checklist.
               </p>
               <div className="flex flex-wrap gap-2">
-                <Badge className="bg-orange-500 text-white">Procedimento padronizado</Badge>
+                <Badge className="bg-yellow-500 text-white">Procedimento padronizado</Badge>
                 <Badge className="bg-green-600 text-white">Zero repetição</Badge>
                 <Badge className="bg-blue-600 text-white">Resultado consistente</Badge>
               </div>

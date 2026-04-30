@@ -30,7 +30,7 @@ function AgentCard({ title, color, description, expertise }: AgentCardProps) {
 export function AgentsSection() {
   return (
     <Card className="border-2 border-blue-300">
-      <CardHeader className="bg-gradient-to-r from-blue-50 to-cyan-50">
+      <CardHeader className="bg-gradient-to-r from-blue-50 to-blue-100">
         <CardTitle className="flex items-center gap-2">
           <FolderOpen className="w-6 h-6 text-blue-600" />
           /agents - Agentes Especializados
@@ -80,7 +80,7 @@ export function AgentsSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <AgentCard
               title="ui-agent.md"
-              color="bg-pink-50 border-pink-300"
+              color="bg-purple-50 border-purple-300"
               description="Especialista em componentes visuais, UX, acessibilidade e design systems"
               expertise={["React components", "CSS/Tailwind", "Responsividade", "A11y"]}
             />

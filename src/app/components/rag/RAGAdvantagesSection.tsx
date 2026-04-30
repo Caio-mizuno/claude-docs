@@ -37,10 +37,10 @@ function SavingsRow({ label, withoutTokens, withTokens, color }: SavingsRowProps
 
 export function RAGAdvantagesSection() {
   return (
-    <Card className="border-2 border-teal-300">
-      <CardHeader className="bg-gradient-to-r from-teal-50 to-cyan-50">
+    <Card className="border-2 border-green-300">
+      <CardHeader className="bg-gradient-to-r from-green-50 to-green-100">
         <CardTitle className="flex items-center gap-2">
-          <TrendingUp className="w-6 h-6 text-teal-600" />
+          <TrendingUp className="w-6 h-6 text-green-600" />
           Vantagens do RAG
         </CardTitle>
         <CardDescription>
@@ -84,7 +84,7 @@ export function RAGAdvantagesSection() {
                 description:
                   "Ao contrário de agentes e skills que exigem atualização manual, o RAG indexa em tempo real. O código novo aparece automaticamente nas buscas.",
                 badge: "Auto-atualizado",
-                badgeColor: "bg-teal-600",
+                badgeColor: "bg-green-600",
               },
               {
                 emoji: "🔍",
@@ -92,7 +92,7 @@ export function RAGAdvantagesSection() {
                 description:
                   'Com RAG vetorial, você busca por conceito, não por nome exato. "gerenciamento de sessão" encontra sessionManager.ts mesmo sem mencionar o arquivo.',
                 badge: "Busca por conceito",
-                badgeColor: "bg-orange-600",
+                badgeColor: "bg-yellow-600",
               },
               {
                 emoji: "🚫",
@@ -126,15 +126,15 @@ export function RAGAdvantagesSection() {
             Verde = com RAG · Vermelho (restante) = sem RAG · "t" = tokens estimados
           </p>
           <div className="space-y-4">
-            <SavingsRow label="Entender feature em projeto médio" withoutTokens={3200} withTokens={220} color="bg-teal-600" />
-            <SavingsRow label="Buscar padrão em 200+ arquivos" withoutTokens={4800} withTokens={180} color="bg-teal-600" />
-            <SavingsRow label="Consultar documentação interna (50 páginas)" withoutTokens={6500} withTokens={150} color="bg-teal-600" />
-            <SavingsRow label="Debug com histórico do módulo" withoutTokens={2800} withTokens={200} color="bg-teal-600" />
+            <SavingsRow label="Entender feature em projeto médio" withoutTokens={3200} withTokens={220} color="bg-green-600" />
+            <SavingsRow label="Buscar padrão em 200+ arquivos" withoutTokens={4800} withTokens={180} color="bg-green-600" />
+            <SavingsRow label="Consultar documentação interna (50 páginas)" withoutTokens={6500} withTokens={150} color="bg-green-600" />
+            <SavingsRow label="Debug com histórico do módulo" withoutTokens={2800} withTokens={200} color="bg-green-600" />
           </div>
-          <div className="mt-4 p-3 bg-teal-50 rounded-lg border border-teal-200">
+          <div className="mt-4 p-3 bg-green-50 rounded-lg border border-green-200">
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <span className="text-sm font-semibold text-teal-900">Economia média com RAG</span>
-              <Badge className="bg-teal-600 text-white text-base px-3">~94% de tokens</Badge>
+              <span className="text-sm font-semibold text-green-900">Economia média com RAG</span>
+              <Badge className="bg-green-600 text-white text-base px-3">~94% de tokens</Badge>
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@ export function RAGAdvantagesSection() {
                 <tr className="bg-slate-100">
                   <th className="text-left p-3 text-xs font-semibold text-slate-600 border border-slate-200">Critério</th>
                   <th className="text-center p-3 text-xs font-semibold text-red-700 border border-slate-200">Contexto Manual</th>
-                  <th className="text-center p-3 text-xs font-semibold text-teal-700 border border-slate-200">RAG via MCP</th>
+                  <th className="text-center p-3 text-xs font-semibold text-green-700 border border-slate-200">RAG via MCP</th>
                 </tr>
               </thead>
               <tbody>
@@ -177,7 +177,7 @@ export function RAGAdvantagesSection() {
         <Separator />
 
         {/* Regra de ouro */}
-        <div className="p-4 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg text-white">
+        <div className="p-4 bg-gradient-to-r from-green-600 to-green-700 rounded-lg text-white">
           <h4 className="font-semibold mb-3 flex items-center gap-2">
             <CheckCircle2 className="w-5 h-5" />
             Quando Usar RAG
@@ -185,15 +185,15 @@ export function RAGAdvantagesSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-center mb-4">
             <div className="bg-white/10 rounded-lg p-3">
               <div className="text-2xl font-bold mb-1">50+</div>
-              <div className="text-xs text-teal-100">arquivos no projeto</div>
+              <div className="text-xs text-green-100">arquivos no projeto</div>
             </div>
             <div className="bg-white/10 rounded-lg p-3">
               <div className="text-2xl font-bold mb-1">Docs</div>
-              <div className="text-xs text-teal-100">internas para consultar</div>
+              <div className="text-xs text-green-100">internas para consultar</div>
             </div>
             <div className="bg-white/10 rounded-lg p-3">
               <div className="text-2xl font-bold mb-1">Time</div>
-              <div className="text-xs text-teal-100">com múltiplos devs</div>
+              <div className="text-xs text-green-100">com múltiplos devs</div>
             </div>
           </div>
           <div className="space-y-2">
@@ -204,8 +204,8 @@ export function RAGAdvantagesSection() {
               "Para evitar reimplementar o que já existe no projeto",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-sm">
-                <Zap className="w-3.5 h-3.5 text-teal-200 flex-shrink-0" />
-                <span className="text-teal-100">{item}</span>
+                <Zap className="w-3.5 h-3.5 text-green-200 flex-shrink-0" />
+                <span className="text-green-100">{item}</span>
               </div>
             ))}
           </div>

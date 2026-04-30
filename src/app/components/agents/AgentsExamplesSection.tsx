@@ -142,7 +142,7 @@ export function AgentsExamplesSection() {
             <WorkflowStep
               step={1}
               agent="@agents/ui-agent.md"
-              color="bg-pink-500"
+              color="bg-purple-500"
               prompt="crie o modal de checkout com campos de cartão"
               result="Modal completo, tipado, acessível e responsivo"
             />

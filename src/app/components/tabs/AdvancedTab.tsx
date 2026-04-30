@@ -140,7 +140,7 @@ export function AdvancedTab() {
         </CardContent>
       </Card>
 
-      <Card className="bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200">
+      <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-purple-600" />
