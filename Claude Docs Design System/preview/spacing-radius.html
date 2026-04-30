@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f8fafc; padding: 20px; }
+.row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.label { font-size: 11px; color: #94a3b8; font-family: monospace; min-width: 80px; }
+.box { height: 32px; border-radius: var(--r); background: #9333ea; display: flex; align-items: center; padding: 0 12px; color: white; font-size: 12px; font-weight: 500; }
+.swatch { width: 32px; height: 32px; border: 1px solid #e2e8f0; }
+</style>
+</head><body>
+<div class="row">
+  <div class="label">radius-xs / 4px</div>
+  <div class="box" style="border-radius:4px">Radius XS</div>
+  <div class="swatch" style="border-radius:4px;background:#9333ea"></div>
+</div>
+<div class="row">
+  <div class="label">radius-sm / 6px</div>
+  <div class="box" style="border-radius:6px">Radius SM</div>
+  <div class="swatch" style="border-radius:6px;background:#9333ea"></div>
+</div>
+<div class="row">
+  <div class="label">radius / 10px ★</div>
+  <div class="box" style="border-radius:10px">Radius MD</div>
+  <div class="swatch" style="border-radius:10px;background:#9333ea"></div>
+</div>
+<div class="row">
+  <div class="label">radius-full</div>
+  <div class="box" style="border-radius:9999px">Pill / Full</div>
+  <div class="swatch" style="border-radius:9999px;background:#9333ea"></div>
+</div>
+</body></html>

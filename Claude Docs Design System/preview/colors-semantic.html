@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f5f6f8; padding: 24px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.chip {
+  background: #fff; border: 1px solid; border-radius: 10px;
+  padding: 14px 16px; display: flex; align-items: flex-start; gap: 12px;
+}
+.swatch-block {
+  width: 40px; height: 40px; border-radius: 8px; flex-shrink: 0;
+}
+.chip-name { font-size: 12px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 3px; }
+.chip-use  { font-size: 11px; color: #667085; line-height: 1.4; }
+.chip-hex  { font-size: 10px; font-family: monospace; margin-top: 5px; opacity: 0.6; }
+</style>
+</head><body>
+<div class="grid">
+
+  <div class="chip" style="border-color:#d1fae5; background:#f0fdf9;">
+    <div class="swatch-block" style="background:linear-gradient(135deg,#16a34a,#4ade80)"></div>
+    <div>
+      <div class="chip-name" style="color:#14532d">Success</div>
+      <div class="chip-use">Ganhos, métricas positivas, quick wins, resultados esperados</div>
+      <div class="chip-hex">#f0fdf4 · #16a34a · #14532d</div>
+    </div>
+  </div>
+
+  <div class="chip" style="border-color:#bfdbfe; background:#eff6ff;">
+    <div class="swatch-block" style="background:linear-gradient(135deg,#2563eb,#60a5fa)"></div>
+    <div>
+      <div class="chip-name" style="color:#1e3a8a">Info</div>
+      <div class="chip-use">Estratégias, dicas neutras, contexto informativo</div>
+      <div class="chip-hex">#eff6ff · #2563eb · #1e3a8a</div>
+    </div>
+  </div>
+
+  <div class="chip" style="border-color:#fde68a; background:#fffbeb;">
+    <div class="swatch-block" style="background:linear-gradient(135deg,#d97706,#fbbf24)"></div>
+    <div>
+      <div class="chip-name" style="color:#78350f">Warning</div>
+      <div class="chip-use">Custos, atenção, estados que exigem cuidado</div>
+      <div class="chip-hex">#fffbeb · #d97706 · #78350f</div>
+    </div>
+  </div>
+
+  <div class="chip" style="border-color:#fecaca; background:#fff5f5;">
+    <div class="swatch-block" style="background:linear-gradient(135deg,#dc2626,#f87171)"></div>
+    <div>
+      <div class="chip-name" style="color:#7f1d1d">Danger</div>
+      <div class="chip-use">Anti-padrões, erros, práticas a evitar, armadilhas</div>
+      <div class="chip-hex">#fff5f5 · #dc2626 · #7f1d1d</div>
+    </div>
+  </div>
+
+</div>
+</body></html>

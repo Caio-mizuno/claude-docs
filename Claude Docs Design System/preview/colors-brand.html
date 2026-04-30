@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f5f6f8; padding: 24px; }
+.section { margin-bottom: 20px; }
+.section-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: #98a2b3; margin-bottom: 10px;
+}
+.swatches { display: flex; gap: 6px; }
+.swatch {
+  flex: 1; height: 56px; border-radius: 8px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 7px 9px; position: relative; overflow: hidden;
+}
+.swatch-label { font-size: 10px; font-weight: 600; line-height: 1.2; }
+.swatch-hex   { font-size: 9px; opacity: 0.7; font-family: 'Courier New', monospace; margin-top: 1px; }
+.role-row { display: flex; gap: 8px; align-items: stretch; }
+.role-chip {
+  flex: 1; background: #fff; border: 1px solid #e4e7ec;
+  border-radius: 8px; padding: 10px 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.dot { width: 28px; height: 28px; border-radius: 6px; flex-shrink: 0; }
+.role-text-name { font-size: 12px; font-weight: 600; color: #101828; }
+.role-text-use  { font-size: 11px; color: #667085; margin-top: 1px; }
+</style>
+</head><body>
+
+<div class="section">
+  <div class="section-label">Purple — Brand Primary</div>
+  <div class="swatches">
+    <div class="swatch" style="background:#f5f0ff; border: 1px solid #e4d4ff;">
+      <div class="swatch-label" style="color:#7c3aed">50</div>
+      <div class="swatch-hex"  style="color:#7c3aed">#f5f0ff</div>
+    </div>
+    <div class="swatch" style="background:#ede9fe;">
+      <div class="swatch-label" style="color:#6d28d9">100</div>
+      <div class="swatch-hex"  style="color:#6d28d9">#ede9fe</div>
+    </div>
+    <div class="swatch" style="background:#ddd6fe;">
+      <div class="swatch-label" style="color:#5b21b6">200</div>
+      <div class="swatch-hex"  style="color:#5b21b6">#ddd6fe</div>
+    </div>
+    <div class="swatch" style="background:#7c3aed; position:relative;">
+      <div style="position:absolute;top:7px;right:9px;font-size:9px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:0.05em">DEFAULT</div>
+      <div class="swatch-label" style="color:#fff">600</div>
+      <div class="swatch-hex"  style="color:rgba(255,255,255,0.7)">#7c3aed</div>
+    </div>
+    <div class="swatch" style="background:#6d28d9;">
+      <div class="swatch-label" style="color:#fff">700</div>
+      <div class="swatch-hex"  style="color:rgba(255,255,255,0.7)">#6d28d9</div>
+    </div>
+    <div class="swatch" style="background:#4c1d95;">
+      <div class="swatch-label" style="color:#fff">900</div>
+      <div class="swatch-hex"  style="color:rgba(255,255,255,0.7)">#4c1d95</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Roles de uso</div>
+  <div class="role-row">
+    <div class="role-chip">
+      <div class="dot" style="background:linear-gradient(135deg,#7c3aed,#9f67fa)"></div>
+      <div>
+        <div class="role-text-name">Brand / Primary</div>
+        <div class="role-text-use">Logo, ícones ativos, botões CTA</div>
+      </div>
+    </div>
+    <div class="role-chip">
+      <div class="dot" style="background:#f5f0ff; border: 1px solid #ddd6fe"></div>
+      <div>
+        <div class="role-text-name">Brand Light</div>
+        <div class="role-text-use">Nav ativa, backgrounds de destaque</div>
+      </div>
+    </div>
+    <div class="role-chip">
+      <div class="dot" style="background:#6d28d9"></div>
+      <div>
+        <div class="role-text-name">Brand Dark</div>
+        <div class="role-text-use">Hover states, texto sobre light bg</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body></html>

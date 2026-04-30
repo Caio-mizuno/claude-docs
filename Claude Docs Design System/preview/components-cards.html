@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f8fafc; padding: 20px; display: flex; gap: 12px; align-items: stretch; }
+.card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.card-metric { background: linear-gradient(135deg, #f0fdf4, #ecfdf5); border-color: #bbf7d0; }
+.card-brand  { background: linear-gradient(135deg, #faf5ff, #f5f0ff); border-color: #e9d5ff; }
+.top-row { display: flex; align-items: center; justify-content: space-between; }
+.title { font-size: 13px; font-weight: 600; color: #0f172a; letter-spacing: -0.01em; }
+.stat  { font-size: 30px; font-weight: 700; color: #15803d; letter-spacing: -0.03em; line-height: 1; }
+.label { font-size: 11px; color: #16a34a; margin-top: 2px; }
+.desc  { font-size: 12px; color: #64748b; line-height: 1.4; }
+.badge { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 9999px; font-size: 11px; font-weight: 500; }
+.tag-green  { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+.tag-purple { background: #faf5ff; color: #7e22ce; border: 1px solid #e9d5ff; }
+.divider { height: 1px; background: #f1f5f9; }
+</style>
+</head><body>
+
+<!-- Metric Card -->
+<div class="card card-metric">
+  <div class="top-row">
+    <div class="title">Performance</div>
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+  </div>
+  <div><div class="stat">+85%</div><div class="label">Melhoria esperada</div></div>
+</div>
+
+<!-- Brand highlight card -->
+<div class="card card-brand">
+  <div class="top-row">
+    <div class="title">Workflow Otimizado</div>
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+  </div>
+  <div class="desc">Stack completo de plugins + prompt especializado para alta qualidade</div>
+  <div><span class="badge tag-purple">Recomendado</span></div>
+</div>
+
+<!-- Content card -->
+<div class="card">
+  <div class="title">Quick Win</div>
+  <div class="divider"></div>
+  <div class="desc">Use seleção de código em vez de mencionar arquivos inteiros</div>
+  <div><span class="badge tag-green">Economia: 80–90% tokens</span></div>
+</div>
+
+</body></html>

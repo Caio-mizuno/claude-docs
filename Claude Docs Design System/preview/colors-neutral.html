@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f5f6f8; padding: 24px; }
+.section { margin-bottom: 20px; }
+.section-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: #98a2b3; margin-bottom: 10px;
+}
+.swatches { display: flex; gap: 6px; }
+.swatch {
+  flex: 1; height: 56px; border-radius: 8px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 7px 9px;
+}
+.swatch-label { font-size: 10px; font-weight: 600; line-height: 1.2; }
+.swatch-hex   { font-size: 9px; opacity: 0.65; font-family: 'Courier New', monospace; margin-top: 1px; }
+.anno { display: flex; gap: 6px; }
+.anno-chip {
+  flex: 1; background: #fff; border: 1px solid #e4e7ec; border-radius: 8px;
+  padding: 9px 11px;
+}
+.anno-name { font-size: 11px; font-weight: 600; color: #101828; }
+.anno-role { font-size: 10px; color: #667085; margin-top: 2px; }
+.anno-samp { font-size: 12px; margin-top: 5px; }
+</style>
+</head><body>
+
+<div class="section">
+  <div class="section-label">Slate — Neutral Scale</div>
+  <div class="swatches">
+    <div class="swatch" style="background:#f8fafc; border:1px solid #e4e7ec">
+      <div class="swatch-label" style="color:#98a2b3">50</div>
+      <div class="swatch-hex" style="color:#98a2b3">#f8fafc</div>
+    </div>
+    <div class="swatch" style="background:#f1f5f9; border:1px solid #e4e7ec">
+      <div class="swatch-label" style="color:#94a3b8">100</div>
+      <div class="swatch-hex" style="color:#94a3b8">#f1f5f9</div>
+    </div>
+    <div class="swatch" style="background:#e2e8f0;">
+      <div class="swatch-label" style="color:#64748b">200</div>
+      <div class="swatch-hex" style="color:#64748b">#e2e8f0</div>
+    </div>
+    <div class="swatch" style="background:#94a3b8;">
+      <div class="swatch-label" style="color:#fff">400</div>
+      <div class="swatch-hex" style="color:rgba(255,255,255,.7)">#94a3b8</div>
+    </div>
+    <div class="swatch" style="background:#475569;">
+      <div class="swatch-label" style="color:#fff">600</div>
+      <div class="swatch-hex" style="color:rgba(255,255,255,.7)">#475569</div>
+    </div>
+    <div class="swatch" style="background:#0f172a;">
+      <div class="swatch-label" style="color:#fff">900</div>
+      <div class="swatch-hex" style="color:rgba(255,255,255,.7)">#0f172a</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Papéis tipográficos</div>
+  <div class="anno">
+    <div class="anno-chip">
+      <div class="anno-name">fg / 900</div>
+      <div class="anno-role">Títulos, labels primários</div>
+      <div class="anno-samp" style="color:#0f172a; font-weight:600">Aa Bb</div>
+    </div>
+    <div class="anno-chip">
+      <div class="anno-name">fg2 / 600</div>
+      <div class="anno-role">Corpo, descrições</div>
+      <div class="anno-samp" style="color:#475569">Aa Bb</div>
+    </div>
+    <div class="anno-chip">
+      <div class="anno-name">fg3 / 400</div>
+      <div class="anno-role">Metadata, placeholders</div>
+      <div class="anno-samp" style="color:#94a3b8">Aa Bb</div>
+    </div>
+    <div class="anno-chip">
+      <div class="anno-name">Border / 200</div>
+      <div class="anno-role">Divisores, bordas de card</div>
+      <div class="anno-samp"><div style="height:2px;background:#e2e8f0;border-radius:2px;margin-top:4px"></div></div>
+    </div>
+  </div>
+</div>
+
+</body></html>

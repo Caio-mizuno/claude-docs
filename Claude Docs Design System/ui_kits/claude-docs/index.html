@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Docs — Guia de Otimização</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; }
+  html, body, #root { height: 100%; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-optical-sizing: auto;
+    background: #f8fafc;
+    color: #101828;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  * { font-family: inherit; }
+  code, pre, .mono { font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace; }
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="Components.jsx"></script>
+<script type="text/babel" src="Pages.jsx"></script>
+
+<script type="text/babel">
+
+const NAV = [
+  { id:'overview',        label:'Visão Geral',   icon:'grid' },
+  { id:'recommendations', label:'Recomendações', icon:'star' },
+  { id:'prompts',         label:'Prompts',        icon:'msg' },
+  { id:'context',         label:'Contexto',       icon:'layers' },
+  { id:'structure',       label:'Estrutura',      icon:'folder' },
+  { id:'agents',          label:'Agentes',        icon:'bot' },
+  { id:'skills',          label:'Skills',         icon:'wrench' },
+  { id:'plugins',         label:'Plugins',        icon:'puzzle' },
+  { id:'rag',             label:'RAG',            icon:'db' },
+  { id:'advanced',        label:'Avançado',       icon:'rocket' },
+];
+
+const NAV_ICONS = {
+  grid:   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>,
+  star:   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>,
+  msg:    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>,
+  layers: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>,
+  folder: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>,
+  bot:    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/></svg>,
+  wrench: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>,
+  puzzle: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>,
+  db:     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>,
+  rocket: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>,
+};
+
+function AppSidebar({ active, onNav }) {
+  return (
+    <aside style={{
+      width: 232, flexShrink: 0,
+      background: '#fff',
+      borderRight: '1px solid #e4e7ec',
+      display: 'flex', flexDirection: 'column',
+      height: '100vh', position: 'sticky', top: 0,
+      overflowY: 'auto',
+    }}>
+      {/* Logo */}
+      <div style={{ padding: '18px 16px 16px', borderBottom: '1px solid #f1f5f9' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <div style={{
+            width: 32, height: 32,
+            background: 'linear-gradient(135deg,#7c3aed,#9f67fa)',
+            borderRadius: 9, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            flexShrink: 0, boxShadow: '0 1px 4px rgba(124,58,237,0.3)',
+          }}>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+            </svg>
+          </div>
+          <div>
+            <div style={{ fontSize: 13, fontWeight: 700, color: '#101828', letterSpacing: '-0.01em', lineHeight: 1.2 }}>Claude Code</div>
+            <div style={{ fontSize: 11, color: '#98a2b3', marginTop: 1 }}>Guia de Otimização</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Nav */}
+      <nav style={{ flex: 1, padding: '10px 8px' }}>
+        {NAV.map(({ id, label, icon }) => {
+          const isActive = active === id;
+          return (
+            <div
+              key={id}
+              onClick={() => onNav(id)}
+              style={{
+                display: 'flex', alignItems: 'center', gap: 9,
+                padding: '8px 10px', borderRadius: 8, marginBottom: 2,
+                fontSize: 13, fontWeight: isActive ? 600 : 500,
+                cursor: 'pointer', transition: 'all 120ms ease',
+                background: isActive ? '#f5f0ff' : 'transparent',
+                color: isActive ? '#5b21b6' : '#475467',
+                letterSpacing: '-0.005em',
+              }}
+              onMouseEnter={e => { if (!isActive) e.currentTarget.style.background = '#fafbfd'; }}
+              onMouseLeave={e => { if (!isActive) e.currentTarget.style.background = 'transparent'; }}
+            >
+              <span style={{ color: isActive ? '#7c3aed' : '#98a2b3', flexShrink: 0 }}>
+                {NAV_ICONS[icon]}
+              </span>
+              {label}
+            </div>
+          );
+        })}
+      </nav>
+
+      {/* Footer */}
+      <div style={{ padding: '12px 16px', borderTop: '1px solid #f1f5f9' }}>
+        <div style={{
+          background: 'linear-gradient(135deg,#f5f0ff,#ede9fe)',
+          border: '1px solid #ddd6fe', borderRadius: 8,
+          padding: '9px 12px', textAlign: 'center',
+        }}>
+          <div style={{ fontSize: 11, color: '#6d28d9', lineHeight: 1.4 }}>
+            Economize até <strong>70%</strong> em custos
+          </div>
+        </div>
+      </div>
+    </aside>
+  );
+}
+
+function AppFooter() {
+  return (
+    <div style={{ marginTop: 48, paddingTop: 24, borderTop: '1px solid #e4e7ec' }}>
+      <div style={{
+        background: 'linear-gradient(135deg,#0f172a,#1e293b)',
+        borderRadius: 12, padding: '20px 24px',
+        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+      }}>
+        <div>
+          <div style={{ fontSize: 14, fontWeight: 600, color: '#fff', marginBottom: 4 }}>Resumo Executivo</div>
+          <div style={{ fontSize: 13, color: '#94a3b8' }}>Seguindo estas práticas, você pode reduzir custos em até 70% e melhorar a performance em 85%</div>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0, marginLeft: 24 }}>
+          <span style={{ fontSize: 22, fontWeight: 700, color: '#4ade80' }}>$$$</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4ade80" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span style={{ fontSize: 22, fontWeight: 700, color: '#4ade80' }}>$</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [page, setPage] = React.useState('overview');
+  const Page = PAGES[page] || PAGES.overview;
+
+  return (
+    <div style={{ display: 'flex', minHeight: '100vh', background: '#f8fafc' }}>
+      <AppSidebar active={page} onNav={setPage}/>
+      <main style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '32px 32px 48px' }}>
+          <Page/>
+          <AppFooter/>
+        </div>
+      </main>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

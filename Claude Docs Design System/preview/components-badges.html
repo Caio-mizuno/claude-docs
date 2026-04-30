@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #f8fafc; padding: 20px; }
+.group { margin-bottom: 14px; }
+.group-label { font-size: 10px; color: #94a3b8; font-weight: 500; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+.row { display: flex; gap: 6px; flex-wrap: wrap; }
+.badge { display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 9999px; font-size: 12px; font-weight: 500; }
+.badge-outline { border: 1px solid; }
+</style>
+</head><body>
+<div class="group">
+  <div class="group-label">Default / Secondary</div>
+  <div class="row">
+    <span class="badge" style="background:#0f172a;color:#fff">Recomendado</span>
+    <span class="badge" style="background:#ececf0;color:#030213">Secondary</span>
+    <span class="badge" style="background:#e9ebef;color:#030213">Accent</span>
+  </div>
+</div>
+<div class="group">
+  <div class="group-label">Semantic</div>
+  <div class="row">
+    <span class="badge" style="background:#f0fdf4;color:#15803d">+85% Performance</span>
+    <span class="badge" style="background:#eff6ff;color:#1d4ed8">Estratégia</span>
+    <span class="badge" style="background:#fefce8;color:#a16207">-70% Custo</span>
+    <span class="badge" style="background:#fef2f2;color:#b91c1c">Evitar</span>
+  </div>
+</div>
+<div class="group">
+  <div class="group-label">Outline variants</div>
+  <div class="row">
+    <span class="badge badge-outline" style="border-color:#bbf7d0;background:#f0fdf4;color:#15803d">Economia: 80-90%</span>
+    <span class="badge badge-outline" style="border-color:#e9d5ff;background:#faf5ff;color:#7e22ce">Pro Tip</span>
+    <span class="badge badge-outline" style="border-color:#e2e8f0;color:#475569">Default</span>
+  </div>
+</div>
+</body></html>

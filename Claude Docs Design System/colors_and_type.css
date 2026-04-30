@@ -1,0 +1,207 @@
+/* ============================================================
+   Claude Docs — Design System Tokens
+   Source: claude-docs/src/styles/theme.css + Tailwind usage
+   ============================================================ */
+
+/* ── FONTS ────────────────────────────────────────────────── */
+/* No custom webfonts defined in the codebase.
+   System-ui stack is used via Tailwind CSS defaults.
+   Nearest Google Fonts substitute: Inter (very close match). */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+
+  /* ── COLOR PRIMITIVES ──────────────────────────────────── */
+
+  /* Slate (neutral) */
+  --slate-50:  #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+
+  /* Purple (brand primary) */
+  --purple-50:  #faf5ff;
+  --purple-100: #f3e8ff;
+  --purple-200: #e9d5ff;
+  --purple-600: #9333ea;
+  --purple-700: #7e22ce;
+
+  /* Green (success / performance) */
+  --green-50:  #f0fdf4;
+  --green-100: #dcfce7;
+  --green-200: #bbf7d0;
+  --green-600: #16a34a;
+  --green-700: #15803d;
+
+  /* Emerald */
+  --emerald-50: #ecfdf5;
+
+  /* Blue (info / strategies) */
+  --blue-50:  #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+
+  /* Yellow / Amber (cost / warning) */
+  --yellow-50:  #fefce8;
+  --yellow-200: #fef08a;
+  --yellow-600: #ca8a04;
+  --yellow-700: #a16207;
+  --amber-50:   #fffbeb;
+
+  /* Red (error / avoid) */
+  --red-50:  #fef2f2;
+  --red-200: #fecaca;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --red-900: #7f1d1d;
+
+  /* ── SEMANTIC TOKENS ───────────────────────────────────── */
+
+  --color-background:        var(--slate-50);
+  --color-surface:           #ffffff;
+  --color-surface-overlay:   #ffffff;
+  --color-border:            rgba(0, 0, 0, 0.10);
+  --color-border-strong:     var(--slate-200);
+
+  --color-fg1:    var(--slate-900);   /* primary text */
+  --color-fg2:    var(--slate-600);   /* secondary text */
+  --color-fg3:    var(--slate-400);   /* muted / metadata */
+
+  --color-brand:          var(--purple-600);
+  --color-brand-light:    var(--purple-50);
+  --color-brand-active-bg: #f5f0ff;   /* nav active bg */
+  --color-brand-active-fg: #6d28d9;   /* nav active text */
+
+  --color-success:        var(--green-600);
+  --color-success-bg:     var(--green-50);
+  --color-success-border: var(--green-200);
+
+  --color-info:        var(--blue-600);
+  --color-info-bg:     var(--blue-50);
+  --color-info-border: var(--blue-200);
+
+  --color-warning:        var(--yellow-600);
+  --color-warning-bg:     var(--yellow-50);
+  --color-warning-border: var(--yellow-200);
+
+  --color-danger:        var(--red-600);
+  --color-danger-bg:     var(--red-50);
+  --color-danger-border: var(--red-200);
+
+  /* Code block */
+  --color-code-bg:   var(--slate-900);
+  --color-code-fg:   #4ade80;   /* green-400 */
+  --color-code-muted: var(--slate-400);
+
+  /* Inline code */
+  --color-inline-code-bg: var(--slate-100);
+  --color-inline-code-fg: var(--slate-700);
+
+  /* Sidebar */
+  --color-sidebar-bg:     #ffffff;
+  --color-sidebar-border: var(--slate-200);
+  --color-nav-hover-bg:   var(--slate-50);
+
+  /* ── TYPOGRAPHY ────────────────────────────────────────── */
+
+  --font-sans:  'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', 'Menlo', monospace;
+
+  --font-size-base: 16px;
+
+  /* Scale */
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  1.875rem;   /* 30px */
+  --text-4xl:  2.25rem;    /* 36px */
+
+  --font-weight-normal:  400;
+  --font-weight-medium:  500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:    700;
+
+  --line-height-tight:  1.25;
+  --line-height-base:   1.5;
+  --line-height-relaxed: 1.625;
+
+  /* Semantic type roles */
+  --type-display:   var(--font-weight-bold)   var(--text-4xl)  / var(--line-height-tight)  var(--font-sans);
+  --type-h1:        var(--font-weight-medium) var(--text-2xl)  / var(--line-height-base)   var(--font-sans);
+  --type-h2:        var(--font-weight-medium) var(--text-xl)   / var(--line-height-base)   var(--font-sans);
+  --type-h3:        var(--font-weight-medium) var(--text-lg)   / var(--line-height-base)   var(--font-sans);
+  --type-h4:        var(--font-weight-medium) var(--text-base) / var(--line-height-base)   var(--font-sans);
+  --type-body:      var(--font-weight-normal) var(--text-base) / var(--line-height-base)   var(--font-sans);
+  --type-body-sm:   var(--font-weight-normal) var(--text-sm)   / var(--line-height-base)   var(--font-sans);
+  --type-caption:   var(--font-weight-normal) var(--text-xs)   / var(--line-height-base)   var(--font-sans);
+  --type-label:     var(--font-weight-medium) var(--text-base) / var(--line-height-base)   var(--font-sans);
+  --type-code:      var(--font-weight-normal) var(--text-sm)   / var(--line-height-relaxed) var(--font-mono);
+  --type-badge:     var(--font-weight-medium) var(--text-xs)   / var(--line-height-base)   var(--font-sans);
+
+  /* ── SPACING ───────────────────────────────────────────── */
+
+  --space-0:  0;
+  --space-1:  0.25rem;   /* 4px */
+  --space-2:  0.5rem;    /* 8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+
+  /* ── BORDER RADIUS ─────────────────────────────────────── */
+
+  --radius:    0.625rem;   /* 10px — default (rounded-lg) */
+  --radius-sm: 0.375rem;   /* 6px  — rounded-md */
+  --radius-xs: 0.25rem;    /* 4px  — rounded */
+  --radius-full: 9999px;   /* pill — rounded-full */
+
+  /* ── SHADOWS ───────────────────────────────────────────── */
+  /* Flat design — cards use border only, no shadows */
+  --shadow-none: none;
+  --shadow-sm:   0 1px 2px 0 rgba(0,0,0,0.05);
+
+  /* ── LAYOUT ────────────────────────────────────────────── */
+
+  --sidebar-width:     240px;  /* 15rem */
+  --content-max-width: 64rem;  /* max-w-5xl = 80rem actually; content is ~5xl */
+
+  /* ── TRANSITIONS ───────────────────────────────────────── */
+
+  --transition-colors: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+  --transition-sidebar: transform 300ms ease-in-out;
+}
+
+/* ── BASE STYLES ─────────────────────────────────────────── */
+
+.ds-body {
+  font: var(--type-body);
+  color: var(--color-fg1);
+  background: var(--color-background);
+}
+
+h1 { font: var(--type-h1); color: var(--color-fg1); }
+h2 { font: var(--type-h2); color: var(--color-fg1); }
+h3 { font: var(--type-h3); color: var(--color-fg1); }
+h4 { font: var(--type-h4); color: var(--color-fg1); }
+p  { font: var(--type-body); color: var(--color-fg2); }
+
+code {
+  font: var(--type-code);
+  background: var(--color-inline-code-bg);
+  color: var(--color-inline-code-fg);
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--radius-xs);
+}
