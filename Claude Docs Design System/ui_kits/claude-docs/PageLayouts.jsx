@@ -75,7 +75,7 @@ function RecommendationsPage() {
       <Separator />
       <div style={{ background: 'rgba(250,245,255,0.5)', border: '1px solid #e9d5ff', borderRadius: 10, padding: '14px 16px', display: 'flex', gap: 10, alignItems: 'flex-start' }}>
         {icons.sparkles}
-        <div className="">
+        <div>
           <div style={{ fontSize: 14, fontWeight: 600, color: '#0f172a' }}>Workflow Otimizado 2026</div>
           <div style={{ fontSize: 13, color: '#64748b', marginTop: 2 }}>Stack completo de plugins + prompt especializado para desenvolvimento de alta qualidade</div>
         </div>

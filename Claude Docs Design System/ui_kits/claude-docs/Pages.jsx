@@ -63,7 +63,7 @@ function RecommendationsPage() {
       <Callout variant="brand">
         <div style={{ display:'flex', alignItems:'flex-start', gap:10 }}>
           {ICONS.sparkles}
-          <div style={{ flex:1 } }>
+          <div style={{ flex:1 }}>
             <div style={{ fontSize:14, fontWeight:600, color:DS.fg1, marginBottom:3 }}>Workflow Otimizado 2026</div>
             <div style={{ fontSize:13, color:DS.fg2 }}>Stack completo de plugins + prompt especializado para desenvolvimento de alta qualidade</div>
           </div>
