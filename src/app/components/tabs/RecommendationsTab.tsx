@@ -22,7 +22,7 @@ export function RecommendationsTab() {
       <Separator />
 
       {/* Destaque - Setup Recomendado */}
-      <Card className="border-purple-200 bg-purple-50/50">
+      <Card className="border-purple-200 bg-purple-50/50 pb-5">
         <CardHeader>
           <div className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-purple-600" />
