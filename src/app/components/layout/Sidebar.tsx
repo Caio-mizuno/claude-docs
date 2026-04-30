@@ -9,16 +9,20 @@ import {
   Wrench,
   Rocket,
   Database,
+  Puzzle,
+  Star,
   X,
 } from "lucide-react";
 
 const navItems = [
   { to: "/", label: "Visão Geral", icon: LayoutDashboard },
+  { to: "/recommendations", label: "Recomendações", icon: Star },
   { to: "/prompts", label: "Prompts", icon: MessageSquare },
   { to: "/context", label: "Contexto", icon: Layers },
   { to: "/structure", label: "Estrutura", icon: FolderOpen },
   { to: "/agents", label: "Agentes", icon: Bot },
   { to: "/skills", label: "Skills", icon: Wrench },
+  { to: "/plugins", label: "Plugins", icon: Puzzle },
   { to: "/rag", label: "RAG", icon: Database },
   { to: "/advanced", label: "Avançado", icon: Rocket },
 ];
