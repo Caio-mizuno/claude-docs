@@ -3,16 +3,16 @@ import { Routes, Route } from "react-router";
 import { Menu, Sparkles } from "lucide-react";
 import { Sidebar } from "./components/layout/Sidebar";
 import { Footer } from "./components/layout/Footer";
-import { OverviewTab } from "./components/tabs/OverviewTab";
-import { PromptsTab } from "./components/tabs/PromptsTab";
-import { ContextTab } from "./components/tabs/ContextTab";
-import { StructureTab } from "./components/StructureTab";
-import { AdvancedTab } from "./components/tabs/AdvancedTab";
 import { AgentsPage } from "./pages/AgentsPage";
 import { SkillsPage } from "./pages/SkillsPage";
 import { RAGPage } from "./pages/RAGPage";
-import { PluginsTab } from "./components/tabs/PluginsTab";
-import { RecommendationsTab } from "./components/tabs/RecommendationsTab";
+import { OverviewPage } from "./pages/OverviewPage";
+import { RecommendationsPage } from "./pages/RecommendationsPage";
+import { PromptsPage } from "./pages/PromptsPage";
+import { ContextPage } from "./pages/ContextPage";
+import { StructurePage } from "./pages/StructurePage";
+import { PluginsPage } from "./pages/PluginsPage";
+import { AdvancedPage } from "./pages/AdvancedPage";
 
 export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -49,16 +49,16 @@ export default function App() {
 
         <div className="max-w-5xl mx-auto p-4 md:p-6">
           <Routes>
-            <Route path="/" element={<OverviewTab />} />
-            <Route path="/recommendations" element={<RecommendationsTab />} />
-            <Route path="/prompts" element={<PromptsTab />} />
-            <Route path="/context" element={<ContextTab />} />
-            <Route path="/structure" element={<StructureTab />} />
+            <Route path="/" element={<OverviewPage />} />
+            <Route path="/recommendations" element={<RecommendationsPage />} />
+            <Route path="/prompts" element={<PromptsPage />} />
+            <Route path="/context" element={<ContextPage />} />
+            <Route path="/structure" element={<StructurePage />} />
             <Route path="/agents" element={<AgentsPage />} />
             <Route path="/skills" element={<SkillsPage />} />
-            <Route path="/plugins" element={<PluginsTab />} />
+            <Route path="/plugins" element={<PluginsPage />} />
             <Route path="/rag" element={<RAGPage />} />
-            <Route path="/advanced" element={<AdvancedTab />} />
+            <Route path="/advanced" element={<AdvancedPage />} />
           </Routes>
           <Footer />
         </div>

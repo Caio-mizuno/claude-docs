@@ -614,6 +614,162 @@ export function PluginsTab() {
           </AccordionContent>
         </AccordionItem>
 
+        <AccordionItem value="graphify" className="border rounded-lg px-4 bg-white">
+          <AccordionTrigger className="hover:no-underline py-4">
+            <div className="flex items-center gap-3 text-left">
+              <Eye className="w-5 h-5 text-indigo-600 flex-shrink-0" />
+              <div className="flex-1">
+                <div className="font-semibold text-slate-900">Graphify</div>
+                <div className="text-sm text-slate-600 mt-0.5">
+                  Mapeia seu projeto (código + docs + PDFs + imagens) em um grafo navegável e consultável
+                </div>
+              </div>
+              <Badge variant="secondary" className="ml-2">Knowledge Graph</Badge>
+              <Badge variant="default" className="ml-2 bg-green-600 text-white">recomendado</Badge>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent className="pb-6 pt-2 space-y-4">
+            <div>
+              <h4 className="font-semibold text-slate-900 mb-2">O que é</h4>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Skill/Plugin que transforma uma pasta inteira em um knowledge graph (app + schema + infra), gerando uma
+                visualização em HTML e um JSON para queries. Ideal para navegar projetos grandes sem depender só de grep.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-slate-900 mb-2">Instalação</h4>
+              <div className="bg-slate-900 rounded-lg p-4 space-y-2">
+                <div className="text-xs text-slate-400 mb-2"># Requer Python 3.10+</div>
+                <div className="text-xs text-slate-400 mt-4 mb-2"># Claude Code (Linux/Mac)</div>
+                <code className="text-sm text-green-400 block">uv tool install graphifyy &amp;&amp; graphify install</code>
+                <div className="text-xs text-slate-400 mt-4 mb-2"># Trae</div>
+                <code className="text-sm text-green-400 block">uv tool install graphifyy &amp;&amp; graphify install --platform trae</code>
+              </div>
+              <p className="text-xs text-slate-500 mt-2">
+                Observação: o pacote oficial no PyPI é <span className="font-medium">graphifyy</span> (com dois “y”), mas o
+                comando continua sendo <span className="font-medium">graphify</span>.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-slate-900 mb-2">Como Usar</h4>
+              <div className="space-y-3">
+                <div className="bg-slate-50 rounded p-3 border border-slate-200">
+                  <p className="text-sm font-medium text-slate-900 mb-2">Gerar o grafo do projeto</p>
+                  <div className="bg-slate-900 rounded p-3 space-y-1">
+                    <code className="text-xs text-green-400 block">/graphify .</code>
+                  </div>
+                  <p className="text-xs text-slate-600 mt-2">
+                    Gera <span className="font-medium">graphify-out/graph.html</span>, <span className="font-medium">GRAPH_REPORT.md</span>{" "}
+                    e <span className="font-medium">graph.json</span>.
+                  </p>
+                </div>
+
+                <div className="bg-slate-50 rounded p-3 border border-slate-200">
+                  <p className="text-sm font-medium text-slate-900 mb-2">Fazer o assistente “sempre usar o grafo”</p>
+                  <div className="bg-slate-900 rounded p-3 space-y-1">
+                    <div className="text-xs text-slate-400 mb-2"># Claude Code</div>
+                    <code className="text-xs text-green-400 block">graphify claude install</code>
+                    <div className="text-xs text-slate-400 mt-4 mb-2"># Trae</div>
+                    <code className="text-xs text-green-400 block">graphify trae install</code>
+                  </div>
+                  <p className="text-xs text-slate-600 mt-2">
+                    Escreve uma configuração para o assistente ler o <span className="font-medium">GRAPH_REPORT.md</span>{" "}
+                    antes de responder sobre o codebase.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-slate-900 mb-2">Comandos</h4>
+              <div className="bg-slate-900 rounded-lg p-4 space-y-2">
+                <div className="text-xs text-slate-400 mb-2"># Gerar / atualizar</div>
+                <code className="text-xs text-green-400 block">/graphify</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw --mode deep</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw --update</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw --directed</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw --cluster-only</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw --no-viz</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw --obsidian</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw --wiki</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw --svg</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw --graphml</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw --neo4j</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw --neo4j-push bolt://localhost:7687</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw --watch</code>
+                <code className="text-xs text-green-400 block">/graphify ./raw --mcp</code>
+
+                <div className="text-xs text-slate-400 mt-4 mb-2"># Adicionar fontes (URL / vídeo / paper)</div>
+                <code className="text-xs text-green-400 block">/graphify add `https://arxiv.org/abs/1706.03762`</code>
+                <code className="text-xs text-green-400 block">
+                  /graphify add {"<video-url>"}
+                </code>
+                <code className="text-xs text-green-400 block">/graphify add `https://...` --author "Name" --contributor "Name"</code>
+
+                <div className="text-xs text-slate-400 mt-4 mb-2"># Query / path / explain</div>
+                <code className="text-xs text-green-400 block">/graphify query "what connects attention to the optimizer?"</code>
+                <code className="text-xs text-green-400 block">/graphify query "..." --dfs --budget 1500</code>
+                <code className="text-xs text-green-400 block">/graphify path "DigestAuth" "Response"</code>
+                <code className="text-xs text-green-400 block">/graphify explain "SwinTransformer"</code>
+
+                <div className="text-xs text-slate-400 mt-4 mb-2"># Hooks</div>
+                <code className="text-xs text-green-400 block">graphify hook install</code>
+                <code className="text-xs text-green-400 block">graphify hook uninstall</code>
+                <code className="text-xs text-green-400 block">graphify hook status</code>
+
+                <div className="text-xs text-slate-400 mt-4 mb-2"># Integrações (install / uninstall)</div>
+                <code className="text-xs text-green-400 block">graphify claude install / uninstall</code>
+                <code className="text-xs text-green-400 block">graphify codex install / uninstall</code>
+                <code className="text-xs text-green-400 block">graphify opencode install</code>
+                <code className="text-xs text-green-400 block">graphify cursor install / uninstall</code>
+                <code className="text-xs text-green-400 block">graphify gemini install / uninstall</code>
+                <code className="text-xs text-green-400 block">graphify copilot install / uninstall</code>
+                <code className="text-xs text-green-400 block">graphify aider install / uninstall</code>
+                <code className="text-xs text-green-400 block">graphify claw install / uninstall</code>
+                <code className="text-xs text-green-400 block">graphify droid install / uninstall</code>
+                <code className="text-xs text-green-400 block">graphify trae install / uninstall</code>
+                <code className="text-xs text-green-400 block">graphify trae-cn install / uninstall</code>
+                <code className="text-xs text-green-400 block">graphify hermes install / uninstall</code>
+                <code className="text-xs text-green-400 block">graphify kiro install / uninstall</code>
+                <code className="text-xs text-green-400 block">graphify antigravity install / uninstall</code>
+
+                <div className="text-xs text-slate-400 mt-4 mb-2"># Utilitários</div>
+                <code className="text-xs text-green-400 block">graphify clone `https://github.com/karpathy/nanoGPT`</code>
+                <code className="text-xs text-green-400 block">graphify merge-graphs a.json b.json --out merged.json</code>
+                <code className="text-xs text-green-400 block">graphify watch ./src</code>
+                <code className="text-xs text-green-400 block">graphify check-update ./src</code>
+                <code className="text-xs text-green-400 block">graphify update ./src</code>
+                <code className="text-xs text-green-400 block">graphify cluster-only ./my-project</code>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-slate-900 mb-2">Recomendações</h4>
+              <div className="bg-slate-50 rounded p-3 border border-slate-200 space-y-1 text-xs text-slate-700">
+                <div>Gere o grafo no root do repo para pegar código, docs e infraestrutura em um único contexto.</div>
+                <div>Commit apenas o que fizer sentido para o time (normalmente, o HTML/JSON pode ser artefato, não fonte).</div>
+                <div>Use a visualização HTML para achar “god nodes” e pontos de acoplamento antes de refatorar.</div>
+                <div>Quando o projeto mudar bastante, regenere o grafo para evitar decisões com base em contexto desatualizado.</div>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-2 pt-2">
+              <a
+                href="https://github.com/safishamsi/graphify"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-purple-700 hover:text-purple-800 font-medium"
+              >
+                <ExternalLink className="w-4 h-4" />
+                GitHub Repository
+              </a>
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+
         {/* Claude HUD */}
         <AccordionItem value="claude-hud" className="border rounded-lg px-4 bg-white">
           <AccordionTrigger className="hover:no-underline py-4">
